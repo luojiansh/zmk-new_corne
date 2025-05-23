@@ -61,6 +61,26 @@
             #binding-cells = <2>;
             tapping-term-ms = <160>;
         };
+
+        mouse_layer: mouse_layer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MOUSE_LAYER";
+            #binding-cells = <0>;
+            bindings = <&mo 6>, <&tog_on 6>;
+        };
+
+        tog_on: tog_on {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "TOG_ON";
+            #binding-cells = <1>;
+        };
+
+        tog_off: tog_off {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "TOG_OFF";
+            #binding-cells = <1>;
+            toggle-mode = "off";
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -83,7 +103,7 @@
         Base {
             bindings = <
 &none        &kp Q  &kp W  &kp F          &kp P         &kp G                              &kp UP               &kp J             &kp L                     &kp U       &kp Y    &kp SQT   &none
-&key_repeat  &kp A  &kp R  &kp S          &kp T         &kp D                    &kp LEFT  &kp RET   &kp RIGHT  &kp H             &kp N                     &kp E       &kp I    &kp O     &none
+&key_repeat  &kp A  &kp R  &kp S          &kp T         &kp D                    &kp LEFT  &kp RET   &kp RIGHT  &kp H             &kp N                     &kp E       &kp I    &kp O     &mouse_layer
 &none        &kp Z  &kp X  &kp C          &kp V         &kp B       &kp SPACE              &kp DOWN             &kp K             &kp M                     &kp COMMA   &kp DOT  &kp FSLH  &none
                            &ltq 3 ESCAPE  &ltq 1 SPACE  &ltq 2 TAB                                              &ltq 4 BACKSPACE  &shift_enter RSHFT ENTER  &ltq 5 DEL
             >;
@@ -131,6 +151,15 @@
 &trans  &none         &none         &none         &bt BT_CLR    &out OUT_TOG           &trans  &trans  &trans  &none   &bt BT_CLR_ALL  &none   &none  &none  &trans
 &trans  &none         &none         &none         &out OUT_USB  &out OUT_BLE  &none            &trans          &none   &none           &none   &none  &none  &trans
                                     &trans        &trans        &trans                                         &trans  &trans          &trans
+            >;
+        };
+
+        Mouse {
+            bindings = <
+&trans  &none      &none      &none      &none      &none                               &mmv MOVE_UP                     &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &none  &trans
+&trans  &sk SPACE  &sk SPACE  &sk SPACE  &sk SPACE  &sk SPACE           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &tog_off 6
+&trans  &none      &none      &none      &none      &none      &none                    &mmv MOVE_DOWN                   &none           &none           &none           &none            &none  &trans
+                              &mkp MCLK  &mkp LCLK  &mkp RCLK                                                            &mkp LCLK       &mkp RCLK       &mkp MCLK
             >;
         };
     };
