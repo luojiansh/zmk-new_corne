@@ -107,6 +107,8 @@
 &none        &kp Z  &kp X  &kp C          &kp V         &kp B       &kp SPACE              &kp DOWN             &kp K             &kp M                     &kp COMMA   &kp DOT  &kp FSLH  &none
                            &ltq 3 ESCAPE  &ltq 1 SPACE  &ltq 2 TAB                                              &ltq 4 BACKSPACE  &shift_enter RSHFT ENTER  &ltq 5 DEL
             >;
+
+            label = "Base";
         };
 
         Symbols {
@@ -116,6 +118,8 @@
 &trans  &kp LESS_THAN    &kp GREATER_THAN  &kp BACKSLASH  &kp PIPE    &kp AMPERSAND  &kp SPACE              &kp DOWN             &kp ASTERISK  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp UNDERSCORE  &trans
                                            &trans         &trans      &trans                                                     &kp LC(BSPC)  &kp SPACE              &kp ESCAPE
             >;
+
+            label = "Syms";
         };
 
         Numbers {
@@ -125,6 +129,8 @@
 &trans  &kp LESS_THAN  &kp GREATER_THAN  &kp TAB    &kp BSPC   &kp RET        &kp SPACE              &kp DOWN             &kp ASTERISK  &kp N1     &kp N2   &kp N3  &kp UNDERSCORE  &trans
                                          &trans     &trans     &trans                                                     &kp N0        &kp SPACE  &kp DOT
             >;
+
+            label = "Nums";
         };
 
         Function {
@@ -134,6 +140,8 @@
 &trans  &kp C_MUTE  &kp C_VOL_DN  &kp LS(LC(BACKSLASH))  &kp LC(LS(V))  &kp C_VOL_UP  &kp SPACE              &kp DOWN             &kp F10        &kp F1     &kp F2     &kp F3  &none       &trans
                                   &trans                 &trans         &trans                                                    &kp RIGHT_ALT  &kp RSHFT  &kp RCTRL
             >;
+
+            label = "Func";
         };
 
         Navigation {
@@ -143,6 +151,8 @@
 &trans  &kp LC(Z)  &kp LC(X)      &kp LC(C)        &kp LC(V)         &kp LEFT_GUI   &kp SPACE              &kp DOWN             &kp RET    &kp BSPC  &kp TAB   &kp C_MENU  &kp PRINTSCREEN  &trans
                                   &kp LCTRL        &kp LSHFT         &kp LEFT_ALT                                               &trans     &trans    &trans
             >;
+
+            label = "Navi";
         };
 
         Control {
@@ -152,6 +162,8 @@
 &trans  &none         &none         &none         &out OUT_USB  &out OUT_BLE  &none            &trans          &none   &none           &none   &none  &none  &trans
                                     &trans        &trans        &trans                                         &trans  &trans          &trans
             >;
+
+            label = "Control";
         };
 
         Mouse {
@@ -161,6 +173,8 @@
 &trans  &none      &none      &none      &none      &none      &none                    &mmv MOVE_DOWN                   &none           &none           &none           &none            &none  &trans
                               &mkp MCLK  &mkp LCLK  &mkp RCLK                                                            &mkp LCLK       &mkp RCLK       &mkp MCLK
             >;
+
+            label = "Mouse";
         };
     };
 };
